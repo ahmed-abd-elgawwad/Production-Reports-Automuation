@@ -18,7 +18,7 @@ class FileTansfer:
         filename = os.listdir(self.source_folder)[0]
 
         # check it is a daily produciton report
-        if filename.startswith("The of your daily report ( any part of it )"):
+        if filename.startswith("The name of your daily report ( any part of it )"):
             # Regular expression pattern to extract date from the filename
             date_pattern = r"(\d{2}-\d{2}-\d{4})"
             match = re.search(date_pattern, filename)
