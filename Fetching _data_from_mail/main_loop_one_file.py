@@ -4,7 +4,7 @@ from db_insert import DBInsert
 from save_one_file import FileTansfer
 import tempfile
 '------------------------------ inputs ---------------------------------'
-report_file_distination_folder = "The destination where you want to store you file on local machine"
+report_file_distination_folder = "The destination where you want to store your file on local machine"
 
 # create a temporary directory
 with tempfile.TemporaryDirectory() as tmpdir:
