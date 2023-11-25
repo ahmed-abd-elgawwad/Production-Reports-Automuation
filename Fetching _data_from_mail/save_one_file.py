@@ -46,9 +46,3 @@ class FileTansfer:
             # show the results
             print(f" daily report of date [{ str(file_date) }] is moved successfully.")
     
-
-if __name__ == "__main__":
-    # Last move the file into it's location in the share
-    destination_base_folder = "D:/Automation_Simulation/Production_Data"
-    transfer = FileTansfer(source_folder="C:/Users/asayed/Desktop/Email_Fetching", destination_base_folder= destination_base_folder)
-    transfer.transfer()
