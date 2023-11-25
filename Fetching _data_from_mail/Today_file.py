@@ -38,7 +38,7 @@ class DownloadFile:
             attachments =  message.Attachments
 
             # check if it is a daily report email
-            if "Daily Production Report" in subject:
+            if "Your production daily email subject" in subject:
 
                 for attachment in attachments:
 
@@ -49,7 +49,7 @@ class DownloadFile:
                         sent_date = (message.SentOn).date()
                         todays_date = datetime.date.today()
 
-                        if sent_date == datetime.date(2023,11,20):
+                        if sent_date == todays_date:
                             file_found = True
                             print(f"Found Today's File , Date sent {sent_date}")
                         
@@ -63,9 +63,3 @@ class DownloadFile:
                             print("No Report found for this date")
 
         return self.file_path
-
-                    
-if __name__ == "__main__":
-    location = r"C:\Users\asayed\Desktop\Email_Fetching".replace("\\","/")
-    downloader = DownloadFile()
-    downloader.save_file(location=location)
